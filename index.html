@@ -959,7 +959,31 @@
         width: 58px;
         height: 58px;
       }
-    }
+    /* MOBILE FIX for TELEGRAM BUTTON */
+@media (max-width: 860px) {
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-tg {
+    position: static !important;
+    transform: none !important;
+    top: auto !important;
+    left: auto !important;
+    margin: 10px 0 0 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-tg a {
+    display: inline-block;
+    padding: 10px 22px !important;
+    font-size: 15px !important;
+    border-radius: 14px;
+  }
+}
+
   </style>
 
   <!-- Chatfenster -->

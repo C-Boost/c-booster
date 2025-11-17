@@ -55,24 +55,15 @@
       z-index: 0;
     }
     .page::before {
-      content: "";
-      position: fixed;
-      inset: -200px;
-      z-index: -1;
-      pointer-events: none;
-      background:
-        radial-gradient(circle at 15% 0%, rgba(0,245,160,0.35), transparent 55%),
-        radial-gradient(circle at 85% 100%, rgba(0,195,255,0.35), transparent 55%),
-        repeating-radial-gradient(
-          circle at 50% 50%,
-          rgba(0,245,160,0.18),
-          rgba(0,245,160,0.18) 3px,
-          transparent 3px,
-          transparent 14px
-        ),
-        radial-gradient(circle at 50% 50%, #071824 0, #020308 60%);
-      opacity: 0.95;
-    }
+  content: "";
+  position: fixed;
+  inset: -200px;
+  z-index: -1;
+  pointer-events: none;
+  background: transparent !important;
+  opacity: 0 !important;
+}
+
 
     header {
       padding: 22px 20px;

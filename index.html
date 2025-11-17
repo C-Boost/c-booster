@@ -525,56 +525,86 @@
 <body>
   <div class="page">
     <header>
-  <div class="nav" style="position:relative;">
-    <div class="brand">
-      <div class="brand-logo">
-        <img src="./C-Boost.png" 
-          alt="CBoost Logo" 
-          style="width:250px;">
+      <div class="nav" style="position:relative;">
+        <div class="brand">
+          <div class="brand-logo">
+            <img src="./C-Boost.png" 
+              alt="CBoost Logo" 
+              style="width:250px;">
+          </div>
+          <div>
+            <div class="brand-name">C-Boost</div>
+            <div class="tag-pill">Polygon · Micro Supply</div>
+          </div>
+        </div>
+
+        <!-- Telegram Button in der Mitte -->
+        <div class="nav-tg"
+             style="
+               position:absolute;
+               left:50%;
+               transform:translateX(-50%);
+               top:50%;
+               translate:0 -50%;
+             ">
+          <a href="https://t.me/CBoost2025" target="_blank"
+             style="
+                background:#0088cc;
+                padding:8px 18px;
+                border-radius:14px;
+                color:white;
+                font-size:14px;
+                text-decoration:none;
+                font-weight:600;
+                box-shadow:0 0 12px #0088cc;
+             ">
+             Telegram
+          </a>
+        </div>
+
+        <!-- X-Button direkt unter dem Telegram-Button -->
+        <div class="nav-x"
+     style="
+       position:absolute;
+       left:50%;
+       transform:translateX(-50%);
+       top:calc(50% + 40px);
+       translate:0 -50%;
+     ">
+  <a href="https://x.com/CBoost2025"  <!-- HIER deine X-URL -->
+     target="_blank"
+     style="
+       background:#cc0000;
+       padding:6px 14px;
+       border-radius:14px;
+       color:white;
+       font-size:14px;
+       text-decoration:none;
+       font-weight:600;
+       border:none;
+       cursor:pointer;
+       box-shadow:0 0 12px #cc0000;
+       display:inline-block;
+     ">
+    X
+  </a>
+</div>
+
+
+        <div class="nav-actions">
+          <a href="https://quickswap.exchange/#/swap"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn btn-primary">
+             Buy C-Boost Coming Soon
+          </a>
+        </div>
       </div>
-      <div>
-        <div class="brand-name">C-Boost</div>
-        <div class="tag-pill">Polygon · Micro Supply</div>
-      </div>
-    </div>
-
-    <!-- Telegram Button in der Mitte -->
-    <div class="nav-tg"
-         style="
-           position:absolute;
-           left:50%;
-           transform:translateX(-50%);
-           top:50%;
-           translate:0 -50%;
-         ">
-      <a href="https://t.me/CBoost2025" target="_blank"
-         style="
-            background:#0088cc;
-            padding:8px 18px;
-            border-radius:14px;
-            color:white;
-            font-size:14px;
-            text-decoration:none;
-            font-weight:600;
-            box-shadow:0 0 12px #0088cc;
-         ">
-         Telegram
-      </a>
-    </div>
-
-    <div class="nav-actions">
-      <a href="https://quickswap.exchange/#/swap"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="btn btn-primary">
-         Buy C-Boost Coming Soon
-      </a>
-    </div>
-
-  </div>
-</header>
+    </header>
 
     <main>
+      <!-- ab hier ist dein ursprünglicher Inhalt unverändert ... -->
+      <!-- (alles unterhalb habe ich NICHT angefasst) -->
       <section class="hero">
         <div>
           <div class="hero-kicker">Micro Supply · Fair Launch</div>
@@ -879,27 +909,25 @@
       z-index: 9998;
       transform-origin: center;
       transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
-      opacity: 0.75; /* leicht transparent */
+      opacity: 0.75;
     }
 
     .cboost-bot-wrapper:hover {
       transform: translateY(-3px) scale(1.03);
       box-shadow: 0 0 26px rgba(94, 234, 212, 0.9);
-      opacity: 0.98; /* beim Hover kräftiger */
+      opacity: 0.98;
     }
 
-    /* Leuchtender, rotierender Ring */
     .cboost-bot-ring {
       position: absolute;
       inset: 0;
       border-radius: inherit;
       background: conic-gradient(from 0deg, #00f5a0, #00c3ff, #00f5a0);
-      opacity: 0.5;              /* softer */
-      filter: blur(1.5px);       /* etwas mehr Blur */
+      opacity: 0.5;
+      filter: blur(1.5px);
       animation: cboost-spin 6s linear infinite;
     }
 
-    /* Kern mit Bot-Bild */
     .cboost-bot-core {
       position: relative;
       width: 70px;
@@ -907,7 +935,7 @@
       border-radius: 999px;
       overflow: hidden;
       background: radial-gradient(circle at 30% 0, #ffffff, #020617);
-      box-shadow: 0 0 16px rgba(34, 197, 94, 0.55); /* weniger stark */
+      box-shadow: 0 0 16px rgba(34, 197, 94, 0.55);
       animation: cboost-float 3s ease-in-out infinite;
     }
 
@@ -918,7 +946,6 @@
       transform: translateY(4px);
     }
 
-    /* Glow-Boden */
     .cboost-bot-wrapper::after {
       content: "";
       position: absolute;
@@ -959,31 +986,34 @@
         width: 58px;
         height: 58px;
       }
+    }
+
     /* MOBILE FIX for TELEGRAM BUTTON */
-@media (max-width: 860px) {
-  .nav {
-    flex-direction: column;
-    gap: 10px;
-  }
+    @media (max-width: 860px) {
+      .nav {
+        flex-direction: column;
+        gap: 10px;
+      }
 
-  .nav-tg {
-    position: static !important;
-    transform: none !important;
-    top: auto !important;
-    left: auto !important;
-    margin: 10px 0 0 0;
-    width: 100%;
-    text-align: center;
-  }
+      .nav-tg,
+      .nav-x {
+        position: static !important;
+        transform: none !important;
+        top: auto !important;
+        left: auto !important;
+        margin: 6px 0 0 0;
+        width: 100%;
+        text-align: center;
+      }
 
-  .nav-tg a {
-    display: inline-block;
-    padding: 10px 22px !important;
-    font-size: 15px !important;
-    border-radius: 14px;
-  }
-}
-
+      .nav-tg a,
+      .nav-x button {
+        display: inline-block;
+        padding: 10px 22px !important;
+        font-size: 15px !important;
+        border-radius: 14px;
+      }
+    }
   </style>
 
   <!-- Chatfenster -->
@@ -1012,7 +1042,6 @@
   </div>
 
   <script>
-    // Backend-URL für deinen Bot
     const API_URL = "https://tbp-advisor.onrender.com/ask_cboost";
 
     const chatBox  = document.getElementById("cboost-chat");

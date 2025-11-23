@@ -32,20 +32,19 @@
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         sans-serif;
-    background: url("./Hero.png") no-repeat center center fixed;
-    background-size: cover;
-    color: var(--text);
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.45);
-    z-index: -1;
-  }
-
+      background: url("./Hero.png") no-repeat center center fixed;
+      background-size: cover;
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: -1;
+    }
 
     .page {
       min-height: 100vh;
@@ -55,15 +54,14 @@
       z-index: 0;
     }
     .page::before {
-  content: "";
-  position: fixed;
-  inset: -200px;
-  z-index: -1;
-  pointer-events: none;
-  background: transparent !important;
-  opacity: 0 !important;
-}
-
+      content: "";
+      position: fixed;
+      inset: -200px;
+      z-index: -1;
+      pointer-events: none;
+      background: transparent !important;
+      opacity: 0 !important;
+    }
 
     header {
       padding: 22px 20px;
@@ -355,11 +353,88 @@
       background: rgba(0, 245, 160, 0.06);
       font-size: 11px;
       color: var(--text-muted);
+      margin-bottom: 12px;
     }
 
     .callout strong {
       color: var(--accent);
     }
+
+    /* >>> Live-Price-Box ------------------------------------------------- */
+    #cboost-price-box {
+      border-radius: 14px;
+      padding: 10px 12px;
+      background: rgba(4, 10, 20, 0.95);
+      border: 1px solid rgba(0, 245, 160, 0.35);
+      box-shadow: 0 0 20px rgba(0, 245, 160, 0.25);
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    #cboost-price-box-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    #cboost-price-box-header img {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      object-fit: cover;
+      box-shadow: 0 0 10px rgba(0, 245, 160, 0.55);
+    }
+
+    #cboost-price-box-header div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #cboost-price-box-header span:first-child {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      color: var(--accent-soft);
+    }
+
+    #cboost-price-box-header span:last-child {
+      font-size: 14px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    #cboost-price-box .stat-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    #cboost-price-box .stat-label {
+      opacity: 0.8;
+      font-size: 11px;
+    }
+
+    #cboost-price-box .stat-value {
+      font-weight: 600;
+      font-size: 12px;
+      color: #ffffff;
+    }
+
+    #cboost-chart-link {
+      display: inline-block;
+      margin-top: 6px;
+      font-size: 11px;
+      color: var(--accent-soft);
+      text-decoration: none;
+    }
+
+    #cboost-chart-link:hover {
+      text-decoration: underline;
+    }
+    /* <<< Live-Price-Box END --------------------------------------------- */
 
     .sections {
       max-width: 1080px;
@@ -538,53 +613,51 @@
           </div>
         </div>
 
-               <!-- Telegram + X Button in der Mitte -->
-    <div class="nav-tg"
-         style="
-           position:absolute;
-           left:50%;
-           transform:translateX(-50%);
-           top:50%;
-           translate:0 -50%;
-           display:flex;
-           flex-direction:column;
-           align-items:center;
-           gap:6px;
-         ">
-      <!-- Telegram Button -->
-      <a href="https://t.me/CBoost2025" target="_blank"
-         style="
-            background:#0088cc;
-            padding:8px 18px;
-            border-radius:14px;
-            color:white;
-            font-size:14px;
-            text-decoration:none;
-            font-weight:600;
-            box-shadow:0 0 12px #0088cc;
-         ">
-         Telegram
-      </a>
+        <!-- Telegram + X Button in der Mitte -->
+        <div class="nav-tg"
+             style="
+               position:absolute;
+               left:50%;
+               transform:translateX(-50%);
+               top:50%;
+               translate:0 -50%;
+               display:flex;
+               flex-direction:column;
+               align-items:center;
+               gap:6px;
+             ">
+          <!-- Telegram Button -->
+          <a href="https://t.me/CBoost2025" target="_blank"
+             style="
+                background:#0088cc;
+                padding:8px 18px;
+                border-radius:14px;
+                color:white;
+                font-size:14px;
+                text-decoration:none;
+                font-weight:600;
+                box-shadow:0 0 12px #0088cc;
+             ">
+             Telegram
+          </a>
 
-      <!-- X Button -->
-      <a href="https://x.com/CBoost2025" target="_blank"
-         style="
-            background:#111111;
-            padding:6px 18px;
-            border-radius:14px;
-            color:white;
-            font-size:14px;
-            text-decoration:none;
-            font-weight:600;
-            border:none;
-            cursor:pointer;
-            box-shadow:0 0 10px #111111;
-         ">
-         X
-      </a>
-    </div>
-
-
+          <!-- X Button -->
+          <a href="https://x.com/CBoost2025" target="_blank"
+             style="
+                background:#111111;
+                padding:6px 18px;
+                border-radius:14px;
+                color:white;
+                font-size:14px;
+                text-decoration:none;
+                font-weight:600;
+                border:none;
+                cursor:pointer;
+                box-shadow:0 0 10px #111111;
+             ">
+             X
+          </a>
+        </div>
 
         <div class="nav-actions">
           <a href="https://dapp.quickswap.exchange/swap/v2/ETH/0xAd5a6A9E786B8c9F075987e1029293bf83f14d5b?chainId=137"
@@ -598,8 +671,6 @@
     </header>
 
     <main>
-      <!-- ab hier ist dein ursprünglicher Inhalt unverändert ... -->
-      <!-- (alles unterhalb habe ich NICHT angefasst) -->
       <section class="hero">
         <div>
           <div class="hero-kicker">Micro Supply · Fair Launch</div>
@@ -657,8 +728,32 @@
               liquidity. No private sale, no presale, no hidden team wallet.
             </div>
 
-            <!-- Mittlerer Buy-Button ENTFERNT – nur noch "How it works" -->
-            <div style="margin-top: 14px; display: grid; gap: 8px;">
+            <!-- >>> Live Price Box -->
+            <div id="cboost-price-box">
+              <div id="cboost-price-box-header">
+                <img src="./C-Boost.png" alt="C-Boost Logo">
+                <div>
+                  <span>Live Data</span>
+                  <span>C-Boost (CBOOST)</span>
+                </div>
+              </div>
+              <div class="stat-row">
+                <span class="stat-label">🪙 Price</span>
+                <span class="stat-value" id="cb-price">Loading…</span>
+              </div>
+              <div class="stat-row">
+                <span class="stat-label">💰 Market Cap</span>
+                <span class="stat-value" id="cb-mc">Loading…</span>
+              </div>
+              <div class="stat-row">
+                <span class="stat-label">📊 24h Volume</span>
+                <span class="stat-value" id="cb-vol">Loading…</span>
+              </div>
+              <a id="cboost-chart-link" href="#" target="_blank">📈 Open Live Chart</a>
+            </div>
+            <!-- <<< Live Price Box END -->
+
+            <div style="margin-top: 8px; display: grid; gap: 8px;">
               <a
                 href="#how-to-buy"
                 class="btn btn-ghost"
@@ -984,53 +1079,50 @@
     }
 
     /* MOBILE FIX: Telegram + X untereinander */
-@media (max-width: 860px) {
+    @media (max-width: 860px) {
 
-  .nav {
-    flex-direction: column;
-    gap: 10px;
-  }
+      .nav {
+        flex-direction: column;
+        gap: 10px;
+      }
 
-  /* Gemeinsamer Container */
-  .nav-tg {
-    position: static !important;
-    transform: none !important;
-    top: auto !important;
-    left: auto !important;
-    translate: none !important;
+      .nav-tg {
+        position: static !important;
+        transform: none !important;
+        top: auto !important;
+        left: auto !important;
+        translate: none !important;
 
-    width: 100%;
-    margin-top: 10px;
+        width: 100%;
+        margin-top: 10px;
 
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 10px !important;
-  }
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 10px !important;
+      }
 
-  /* X Säule falls ein eigener Container existiert */
-  .nav-x {
-    position: static !important;
-    transform: none !important;
-    top: auto !important;
-    left: auto !important;
-    translate: none !important;
+      .nav-x {
+        position: static !important;
+        transform: none !important;
+        top: auto !important;
+        left: auto !important;
+        translate: none !important;
 
-    width: 100%;
-    text-align: center;
-    margin-top: 0 !important;
-  }
+        width: 100%;
+        text-align: center;
+        margin-top: 0 !important;
+      }
 
-  /* Beide Buttons */
-  .nav-tg a,
-  .nav-x a {
-    display: block !important;
-    padding: 10px 22px !important;
-    font-size: 16px !important;
-    border-radius: 14px;
-    text-align: center;
-  }
-}
+      .nav-tg a,
+      .nav-x a {
+        display: block !important;
+        padding: 10px 22px !important;
+        font-size: 16px !important;
+        border-radius: 14px;
+        text-align: center;
+      }
+    }
 
   </style>
 
@@ -1137,6 +1229,49 @@
     document.addEventListener("mouseup", () => {
       drag = false;
     });
+
+    // ===== Live-Price Fetch für Webseite =====
+    async function fetchCBoostPrice() {
+      try {
+        const res = await fetch("https://tbp-advisor.onrender.com/cboost_price");
+        const data = await res.json();
+        if (!data.ok) throw new Error("no data");
+
+        const priceEl = document.getElementById("cb-price");
+        const mcEl    = document.getElementById("cb-mc");
+        const volEl   = document.getElementById("cb-vol");
+        const linkEl  = document.getElementById("cboost-chart-link");
+
+        function fmtUsd(x, digits = 6) {
+          if (x === null || x === undefined) return "N/A";
+          const n = Number(x);
+          if (!isFinite(n)) return "N/A";
+          if (n >= 1_000_000_000) return "$" + (n / 1_000_000_000).toFixed(2) + "B";
+          if (n >= 1_000_000)     return "$" + (n / 1_000_000).toFixed(2) + "M";
+          if (n >= 1_000)         return "$" + (n / 1_000).toFixed(2) + "K";
+          return "$" + n.toFixed(digits);
+        }
+
+        priceEl.textContent = fmtUsd(data.price, 8);
+        mcEl.textContent    = fmtUsd(data.market_cap, 2);
+        volEl.textContent   = fmtUsd(data.volume_24h, 2);
+
+        if (data.chart_url) {
+          linkEl.href = data.chart_url;
+        } else {
+          linkEl.style.display = "none";
+        }
+      } catch (err) {
+        console.error("C-Boost price error:", err);
+        document.getElementById("cb-price").textContent = "N/A";
+        document.getElementById("cb-mc").textContent    = "N/A";
+        document.getElementById("cb-vol").textContent   = "N/A";
+      }
+    }
+
+    // direkt beim Laden + alle 60 Sekunden aktualisieren
+    fetchCBoostPrice();
+    setInterval(fetchCBoostPrice, 60000);
   </script>
 </body>
 </html>
